@@ -13,19 +13,19 @@ A simple file watcher. This needs to work now!
 * Monitoring C files:
 
 ```bash
-curl -sL <mirror> | bash -s '*.c' 'gcc -o app main.c ; ./examples/app'
+curl -sL bit.ly/3mrE5Bp | bash -s '*.c' 'gcc -o app main.c ; ./examples/app'
 ```
 
 * Monitoring Multiple file extensions:
 
 ```bash
-curl -sL <mirror> | bash -s '*.{js,html}' 'node app.js'
+curl -sL bit.ly/3mrE5Bp | bash -s '*.{js,html}' 'node app.js'
 ```
 
 * Monitoring folder:
 
 ```bash
-curl -sL <mirror> | bash -s 'examples/' 'node app.js'
+curl -sL bit.ly/3mrE5Bp | bash -s 'examples/' 'node app.js'
 ```
 
 ## Tests
