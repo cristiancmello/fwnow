@@ -4,7 +4,7 @@ A simple file watcher. This needs to work now!
 
 ## Requirements
 
-* **inotify-tools**: automatically automatically
+* **inotify-tools**: automatically installed
 
 ## Usage
 
