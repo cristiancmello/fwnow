@@ -3,7 +3,12 @@
 PID="-1"
 ARGS=("$@") 
 MONITOR_FILES_EXPR=${ARGS[0]}
-INOTIFYTOOLS_BINPATH="./inotify-tools/usr/bin/inotifywait"
+
+if [[ -z $(which inotifywait) ]]; then
+  echo "Installing inotify-tools..."
+  sudo apt-get update
+  sudo apt-get install -y inotify-tools
+fi
 
 action() {
   command=
@@ -26,8 +31,8 @@ loopActions() {
   action
 }
 
-# firstAction
+firstAction
 
-# while echo "inotifywait -qqre modify $MONITOR_FILES_EXPR" | bash; do
-#   loopActions
-# done
+while echo "inotifywait -qqre modify $MONITOR_FILES_EXPR" | bash; do
+  loopActions
+done
